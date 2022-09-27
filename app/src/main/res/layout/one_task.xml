@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="200dp"
-    android:layout_width="170dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="18dp">
+    android:id="@+id/one_task"
+    android:layout_width="170dp"
+    android:layout_height="200dp"
+    android:layout_margin="18dp"
+    app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,27 +18,28 @@
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:background="@color/title_tint"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Testing"
-            android:maxLines="1"
-            android:padding="10dp"
-            android:gravity="center|start"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
+            tools:text="Testing" />
 
         <TextView
-            tools:text="Testingsdfdsfdsfdsfdsffsdfdsfsdfdsfdsfdsfsdfsfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfdsfsdfdsfsdfdsfsdfsdfsdfsdfsdfsdfsdfdssdfsdfsdfsdfdsfdsfsdfsdfsdfdsfsdfdsfdfsdfsddsfsdfsdfsfdsfsdffsdfsdfsdfsdfsdf"
-            android:padding="10dp"
-            android:gravity="start"
             android:id="@+id/task_body"
             android:layout_width="170dp"
             android:layout_height="150dp"
             android:background="@color/body_tint"
+            android:gravity="start"
+            android:padding="10dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/task_title" />
+            app:layout_constraintTop_toBottomOf="@+id/task_title"
+            tools:text="Testingsdfdsfdsfdsfdsffsdfdsfsdfdsfdsfdsfsdfsfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfdsfsdfdsfsdfdsfsdfsdfsdfsdfsdfsdfsdfdssdfsdfsdfsdfdsfdsfsdfsdfsdfdsfsdfdsfdfsdfsddsfsdfsdfsfdsfsdffsdfsdfsdfsdfsdf" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="30dp"

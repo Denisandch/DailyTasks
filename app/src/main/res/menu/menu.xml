@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
- <item
-     android:title="delete"
-     android:id="@+id/delete_menu"
-     android:icon="@drawable/delete_menu"
-     />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/delete_menu"
+        android:icon="@drawable/delete_menu"
+        android:title="Delete all tasks"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/add_item_menu"
+        android:icon="@drawable/add_button"
+        android:title="Add new task"
+        app:showAsAction="ifRoom" />
 </menu>
