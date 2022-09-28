@@ -23,7 +23,7 @@ class TaskAdapter: ListAdapter<Task, TaskAdapter.TaskViewHolder>(DiffCallback) {
         fun init(task: Task) {
             binding.taskBody.text = task.body
             binding.taskTitle.text = task.title
-            binding.taskNumber.text = task.id.toString()
+            binding.taskNumber.text = adapterPosition.inc().toString()
 
             itemView.setOnClickListener {
                 val action = AllTasksFragmentDirections.actionAllTasksFragmentToEditFragment(task)
