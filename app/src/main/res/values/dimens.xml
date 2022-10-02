@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="one_item_margin">9dp</dimen>
+    <dimen name="recycler_padding">9dp</dimen>
+    <dimen name="floating_button_margin">18dp</dimen>
+</resources>
