@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="delete_task">Do you really want to delete this task?</string>
     <string name="delete_tasks">Do you really want to delete all these tasks?</string>
+    <string name="edit_hint_title">Your Title</string>
+    <string name="edit_hint_body">Your Task</string>
+
 </resources>

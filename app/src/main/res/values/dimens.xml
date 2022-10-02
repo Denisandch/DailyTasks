@@ -3,4 +3,6 @@
     <dimen name="one_item_margin">9dp</dimen>
     <dimen name="recycler_padding">9dp</dimen>
     <dimen name="floating_button_margin">18dp</dimen>
+    <dimen name="edit_body_top_margin">8dp</dimen>
+    <dimen name="edit_margin">24dp</dimen>
 </resources>
