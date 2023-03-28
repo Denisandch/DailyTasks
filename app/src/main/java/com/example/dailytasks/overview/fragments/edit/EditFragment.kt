@@ -49,7 +49,7 @@ class EditFragment : Fragment() {
     }
 
     private fun initProperties() {
-        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+        taskViewModel = ViewModelProvider(this)[TaskViewModel::class.java]
     }
 
     private fun setupMenu() {
@@ -86,7 +86,7 @@ class EditFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Deleting Task")
             .setMessage(R.string.delete_task)
-            .setNegativeButton("Cancel") { _, _ ->}
+            .setNegativeButton("Cancel") { _, _ -> }
             .setPositiveButton("Yes") { _, _ ->
                 taskViewModel.deleteOneTask(makeTask())
                 closeFragment()
@@ -95,7 +95,7 @@ class EditFragment : Fragment() {
     }
 
     private fun updateTask() {
-        if(isFieldsEmpty()) {
+        if (isFieldsEmpty()) {
             Toast.makeText(requireContext(), R.string.empty_body, Toast.LENGTH_SHORT).show()
         } else {
             taskViewModel.updateTask(makeTask())
@@ -107,7 +107,7 @@ class EditFragment : Fragment() {
 
     private fun makeTask(): Task {
 
-        val title = if(isTitleEmpty()) {
+        val title = if (isTitleEmpty()) {
             binding.bodyText.text.toString().substringBefore(" ")
         } else {
             binding.titleText.text.toString()

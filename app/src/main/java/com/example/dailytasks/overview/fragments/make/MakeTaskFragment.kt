@@ -76,7 +76,7 @@ class MakeTaskFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Deleting Task")
             .setMessage(R.string.delete_task)
-            .setNegativeButton("Cancel") { _, _ ->}
+            .setNegativeButton("Cancel") { _, _ -> }
             .setPositiveButton("Yes") { _, _ ->
                 closeFragment()
             }
@@ -84,7 +84,7 @@ class MakeTaskFragment : Fragment() {
     }
 
     private fun addTask() {
-        if(isFieldsEmpty()) {
+        if (isFieldsEmpty()) {
             Toast.makeText(requireContext(), R.string.empty_body, Toast.LENGTH_SHORT).show()
         } else {
             taskViewModel.addTask(makeTask())
@@ -98,7 +98,7 @@ class MakeTaskFragment : Fragment() {
 
     private fun makeTask(): Task {
 
-        val title = if(isTitleEmpty()) {
+        val title = if (isTitleEmpty()) {
             binding.bodyText.text.toString().substringBefore(" ")
         } else {
             binding.titleText.text.toString()

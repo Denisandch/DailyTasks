@@ -57,7 +57,7 @@ class AllTasksFragment : Fragment() {
     }
 
     private fun setOnClickListeners() {
-        binding.newTaskButton.setOnClickListener{
+        binding.newTaskButton.setOnClickListener {
             findNavController().navigate(R.id.action_allTasksFragment_to_makeTaskFragment)
         }
     }
@@ -73,6 +73,7 @@ class AllTasksFragment : Fragment() {
 
                 when (menuItem.itemId) {
                     R.id.delete_menu -> deleteTask()
+
                     R.id.add_item_menu -> findNavController()
                         .navigate(R.id.action_allTasksFragment_to_makeTaskFragment)
                 }
@@ -86,7 +87,7 @@ class AllTasksFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Deleting Tasks")
             .setMessage(R.string.delete_tasks)
-            .setNegativeButton("Cancel") { _, _ ->}
+            .setNegativeButton("Cancel") { _, _ -> }
             .setPositiveButton("Yes") { _, _ ->
                 taskViewModel.deleteAllTasks()
             }

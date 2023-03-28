@@ -7,7 +7,7 @@ import com.example.dailytasks.data.TaskDatabase
 import com.example.dailytasks.data.TaskRepository
 import kotlinx.coroutines.launch
 
-class TaskViewModel(application: Application): AndroidViewModel(application) {
+class TaskViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _getAllTasks: LiveData<List<Task>>
     val getAllTasks: LiveData<List<Task>>
